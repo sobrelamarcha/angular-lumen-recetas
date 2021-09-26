@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class ExampleController extends Controller
+use App\Models\Receta;
+
+class RecetaController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -12,6 +14,12 @@ class ExampleController extends Controller
     public function __construct()
     {
         //
+    }
+
+    public function index()
+    {
+        $data = Receta::all();
+        return response($data);
     }
 
     //
