@@ -12,44 +12,15 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="nav navbar-nav">
-            <a class="nav-item nav-link active" href="#">Listado recetas <span class="visually-hidden">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Insertar receta</a>
+            <a class="nav-item nav-link active" routerLink="/">Listado recetas <span class="visually-hidden">(current)</span></a>
+            <a class="nav-item nav-link" routerLink="/nuevareceta">Insertar receta</a>
         </div>
     </nav>
 
 
     <div class="container">
-        
 
-    <div class="row">
-        <div class="col-md-1-12" style="background-color: #e3e3e3;">
-
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Tiempo de preparación</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row">1</td>
-                        <td>Galletas</td>
-                        <td>5:00</td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-
-        </div>
-        
-    </div>
-        
-
-
-
+        <router-outlet></router-outlet>
 
     </div>
     
