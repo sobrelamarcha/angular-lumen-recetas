@@ -10,10 +10,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td>Galletas</td>
-                    <td>5:00</td>
+                <tr *ngFor="let receta of Recetas; let iReceta=index">
+                    <td scope="row">{{ receta.id }}</td>
+                    <td>{{ receta.nombre }}</td>
+                    <td> -- falta el tiempo -- </td>
                 </tr>
 
             </tbody>
