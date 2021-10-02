@@ -8,7 +8,7 @@ import { Receta } from './Receta';
 })
 export class RecetasService {
 
-  API:string = 'http://localhost/proyectos/angular12-lumen-recetas/api/public/recetas'
+  API:string = 'http://localhost/proyectos/angular-lumen-recetas/api/public/recetas'
 
   constructor(private clienteHttp: HttpClient) { }
 
