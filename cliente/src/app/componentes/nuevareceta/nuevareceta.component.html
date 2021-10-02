@@ -12,6 +12,14 @@
                 class="form-control" name="nombre" id="nombre"  placeholder="Escribe el nombre" formControlName="nombre">
             </div>
 
+
+            <div class="mb-3">
+            <label for="tiempo_preparacion" class="form-label">Tiempo de preparación:</label>
+            <input type="time"
+                min="00:00" max="24:00"
+                class="form-control" name="tiempo_preparacion" id="tiempo_preparacion"  placeholder="Escribe el tiempo de preparación" formControlName="tiempo_preparacion">
+            </div>
+
             <div class="d-grid gap-2">
               <button type="submit" class="btn btn-success">Agregar</button>
               <button type="button" class="btn btn-primary">Cancelar</button>

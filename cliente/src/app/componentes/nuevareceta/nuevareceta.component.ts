@@ -18,7 +18,8 @@ export class NuevarecetaComponent implements OnInit {
     ) { 
 
     this.formularioDeRecetas = formulario.group({
-      nombre: ['']
+      nombre: [''],
+      tiempo_preparacion: null
     })
 
   }

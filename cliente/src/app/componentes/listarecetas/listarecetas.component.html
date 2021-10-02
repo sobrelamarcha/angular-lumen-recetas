@@ -13,7 +13,7 @@
                 <tr *ngFor="let receta of Recetas; let iReceta=index">
                     <td scope="row">{{ receta.id }}</td>
                     <td>{{ receta.nombre }}</td>
-                    <td> -- falta el tiempo -- </td>
+                    <td>{{ receta.tiempo_preparacion }}</td>
                 </tr>
 
             </tbody>

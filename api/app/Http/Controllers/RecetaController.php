@@ -28,7 +28,7 @@ class RecetaController extends Controller
 
         $receta->nombre = $request->json()->get('nombre');
         
-        $receta->tiempo_preparacion = date('H:i:s', strtotime('1:30')); //TODO: de momento está hardcodeado
+        $receta->tiempo_preparacion = date('H:i:s', strtotime($request->json()->get('tiempo_preparacion')));
 
         $receta->save();
         
