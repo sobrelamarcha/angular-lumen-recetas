@@ -18,3 +18,4 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/recetas','RecetaController@index');
+$router->post('/recetas','RecetaController@crear');

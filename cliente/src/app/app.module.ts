@@ -4,9 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { ListarecetasComponent } from './componentes/listarecetas/listarecetas.component';
 import { NuevarecetaComponent } from './componentes/nuevareceta/nuevareceta.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { NuevarecetaComponent } from './componentes/nuevareceta/nuevareceta.comp
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
 ],
   providers: [],
   bootstrap: [AppComponent]

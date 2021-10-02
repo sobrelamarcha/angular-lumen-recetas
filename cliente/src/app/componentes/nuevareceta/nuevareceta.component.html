@@ -1,1 +1,24 @@
-<p>nuevareceta works!</p>
+<div class="card">
+    <div class="card-header">
+        Agregar receta
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formularioDeRecetas" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text"
+                class="form-control" name="nombre" id="nombre"  placeholder="Escribe el nombre" formControlName="nombre">
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-success">Agregar</button>
+              <button type="button" class="btn btn-primary">Cancelar</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
