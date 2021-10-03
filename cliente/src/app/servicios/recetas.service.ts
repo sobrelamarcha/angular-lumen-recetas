@@ -21,4 +21,8 @@ export class RecetasService {
     return this.clienteHttp.get(this.API);
   }
 
+  BorrarReceta(id:any):Observable<any> {
+    return this.clienteHttp.delete(this.API + "/" + id);
+  }
+
 }

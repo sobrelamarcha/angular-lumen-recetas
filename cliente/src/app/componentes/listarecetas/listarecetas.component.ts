@@ -20,4 +20,11 @@ export class ListarecetasComponent implements OnInit {
     })
   }
 
+  borrarRegistro(id:any,iControl:any){
+    console.log(id + " - " + iControl)
+    this.recetasService.BorrarReceta(id).subscribe( respuesta => {
+      this.Recetas.splice(iControl,1)
+    })
+  }
+
 }

@@ -36,5 +36,13 @@ class RecetaController extends Controller
 
     }
 
+    public function borrar($id){
+        $receta = Receta::find($id);
+
+        $receta->delete();
+
+        return response()->json('Receta eliminada');
+    }
+
     //
 }
