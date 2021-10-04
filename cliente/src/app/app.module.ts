@@ -9,11 +9,13 @@ import { ListarecetasComponent } from './componentes/listarecetas/listarecetas.c
 import { NuevarecetaComponent } from './componentes/nuevareceta/nuevareceta.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditarecetaComponent } from './componentes/editareceta/editareceta.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListarecetasComponent,
-    NuevarecetaComponent
+    NuevarecetaComponent,
+    EditarecetaComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,8 @@
                     <td>{{ receta.nombre }}</td>
                     <td>{{ receta.tiempo_preparacion }}</td>
                     <td>
-                        <a name="btneditar" id="btneditar" class="btn btn-primary" href="#" role="button">Editar</a>
+                        <a name="btneditar" id="btneditar" class="btn btn-primary" href="#" routerLink="/editareceta/{{ receta.id }}" role="button">Editar</a>
+
                         <a name="btnborrar" id="btnborrar" (click)="borrarRegistro(receta.id,iReceta)" class="btn btn-danger" href="#" role="button">Borrar</a>
                     </td>
                 </tr>

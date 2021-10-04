@@ -16,9 +16,14 @@ export class RecetasService {
     return this.clienteHttp.post(this.API, datosReceta);
   }
 
-  ObtenerRecetas(){
+  ObtenerRecetas():Observable<any>{
     console.log('obteniendo recetas...');
     return this.clienteHttp.get(this.API);
+  }
+
+  ObtenerReceta(id:any):Observable<any>{
+    console.log('obteniendo receta ' + id + ' ...');
+    return this.clienteHttp.get(this.API + "/" + id);
   }
 
   BorrarReceta(id:any):Observable<any> {
