@@ -1,29 +1,43 @@
 <div class="row">
     <div class="col-md-1-12" style="background-color: #e3e3e3;">
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Tiempo de preparación</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let receta of Recetas; let iReceta=index">
-                    <td scope="row">{{ receta.id }}</td>
-                    <td>{{ receta.nombre }}</td>
-                    <td>{{ receta.tiempo_preparacion }}</td>
-                    <td>
-                        <a name="btneditar" id="btneditar" class="btn btn-primary" href="#" routerLink="/editareceta/{{ receta.id }}" role="button">Editar</a>
 
-                        <a name="btnborrar" id="btnborrar" (click)="borrarRegistro(receta.id,iReceta)" class="btn btn-danger" href="#" role="button">Borrar</a>
-                    </td>
-                </tr>
+        <div class="card">
+            <div class="card-header">
+                <a class="btn btn-success" href="/nuevareceta" role="button">Agregar nueva receta</a>
+            </div>
+            <div class="card-body">
 
-            </tbody>
-        </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Tiempo de preparación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let receta of Recetas; let iReceta=index">
+                            <td scope="row">{{ receta.id }}</td>
+                            <td>{{ receta.nombre }}</td>
+                            <td>{{ receta.tiempo_preparacion }}</td>
+                            <td>
+                                <a name="btneditar" id="btneditar" class="btn btn-primary" href="#" routerLink="/editareceta/{{ receta.id }}" role="button">Editar</a>
+
+                                <a name="btnborrar" id="btnborrar" (click)="borrarRegistro(receta.id,iReceta)" class="btn btn-danger" href="#" role="button">Borrar</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+            </div>    
+
+        </div>    
+
+
 
 
     </div>
