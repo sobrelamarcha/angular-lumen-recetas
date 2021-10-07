@@ -21,3 +21,4 @@ $router->get('/recetas','RecetaController@index');
 $router->get('/recetas/{id}','RecetaController@ver');
 $router->post('/recetas','RecetaController@crear');
 $router->delete('/recetas/{id}','RecetaController@borrar');
+$router->put('/recetas/{id}','RecetaController@actualizar');

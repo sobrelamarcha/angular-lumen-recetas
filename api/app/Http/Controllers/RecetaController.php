@@ -51,5 +51,18 @@ class RecetaController extends Controller
         return response()->json('Receta eliminada');
     }
 
-    //
+
+    public function actualizar(Request $request, $id){
+        $receta = Receta::find($id);
+
+        $receta->nombre = $request->json()->get('nombre');
+        $receta->tiempo_preparacion = date('H:i:s', strtotime($request->json()->get('tiempo_preparacion')));
+
+        $receta->save();
+
+        return response()->json('Receta modificada');
+    }
+
+
+    
 }

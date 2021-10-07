@@ -21,14 +21,14 @@ export class EditarecetaComponent implements OnInit {
   constructor(
     public formulario:FormBuilder,
     private activeRoute:ActivatedRoute,
-    private recetasService: RecetasService
+    private recetasService: RecetasService,
+    private ruteador:Router
     ) { 
 
-     this.elId = activeRoute.snapshot.paramMap.get('id');
+     this.elId = this.activeRoute.snapshot.paramMap.get('id');
      console.log(this.elId);
 
      this.formularioDeRecetas = formulario.group({
-      id: null,
       nombre: [''],
       tiempo_preparacion: "11:11"
     })
@@ -38,7 +38,6 @@ export class EditarecetaComponent implements OnInit {
 
 
        this.formularioDeRecetas.setValue({
-        id: respuesta.id,
         nombre: respuesta.nombre,
         tiempo_preparacion: respuesta.tiempo_preparacion
 
@@ -51,10 +50,13 @@ export class EditarecetaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  enviarDatos(): any {
+  editarDatos(): any {
     console.log("me presionaste")
+    console.log(this.elId)
     console.log(this.formularioDeRecetas.value)
-    this.recetasService.AgregarReceta(this.formularioDeRecetas.value).subscribe();
+    this.recetasService.EditarReceta(this.elId, this.formularioDeRecetas.value).subscribe(()=>{
+      this.ruteador.navigateByUrl('/');
+    });
   }
 
 }

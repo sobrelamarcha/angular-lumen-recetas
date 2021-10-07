@@ -30,4 +30,8 @@ export class RecetasService {
     return this.clienteHttp.delete(this.API + "/" + id);
   }
 
+  EditarReceta(id:any,datosReceta:Receta):Observable<any> {
+    return this.clienteHttp.put(this.API + "/" + id, datosReceta);
+  }
+
 }
