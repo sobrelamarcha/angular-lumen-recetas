@@ -23,6 +23,13 @@ class RecetaController extends Controller
         return response($data);
     }
 
+    public function ver($id)
+    {
+        $data = Receta::find($id);
+
+        return response($data);
+    }
+
     public function crear(Request $request){
         $receta = new Receta();
 

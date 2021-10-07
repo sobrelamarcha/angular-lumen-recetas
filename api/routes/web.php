@@ -18,5 +18,6 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/recetas','RecetaController@index');
+$router->get('/recetas/{id}','RecetaController@ver');
 $router->post('/recetas','RecetaController@crear');
 $router->delete('/recetas/{id}','RecetaController@borrar');
