@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { RecetasService } from 'src/app/servicios/recetas.service';
+import {Router, ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'app-nuevareceta',
@@ -14,7 +16,8 @@ export class NuevarecetaComponent implements OnInit {
 
   constructor(
     public formulario:FormBuilder,
-    private recetasService:RecetasService
+    private recetasService:RecetasService,
+    private ruteador:Router
     ) { 
 
     this.formularioDeRecetas = formulario.group({
@@ -30,7 +33,9 @@ export class NuevarecetaComponent implements OnInit {
   enviarDatos(): any {
     console.log("me presionaste")
     console.log(this.formularioDeRecetas.value)
-    this.recetasService.AgregarReceta(this.formularioDeRecetas.value).subscribe();
+    this.recetasService.AgregarReceta(this.formularioDeRecetas.value).subscribe(()=>{
+      this.ruteador.navigateByUrl('/');
+    });
   }
 
 }
